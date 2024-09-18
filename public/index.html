@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OA Studios</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-offWhite">
+  <!-- Hero Section -->
+  <section id="hero">
+    <!-- Flex Container -->
+    <div class="flex flex-col">
+          <!-- Nav -->
+    <nav class="relative container mx-auto p-12 h-15">
+      <!-- Flex Container -->
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div>
+          <img src="assets/logo-white.svg" alt="" class="h-28 w-29 -ml-4">
+        </div>
+        
+        <!-- Nav Links -->
+        <div class="hidden items-center text-offWhite text-sm font-pri space-x-6 bg-transparent md:flex">
+          <a href="#about" class="hover:text-warmGold">About</a>
+          <a href="#services" class="hover:text-warmGold">Services</a>
+          <a href="#projects" class="hover:text-warmGold">Projects</a>
+          <a href="#testimonies" class="hover:text-warmGold">Testimonies</a>
+          <a href=""  class="hover:text-warmGold">Blog</a>
+          <a href="#contact" class="hover:text-warmGold">Contact</a>
+        </div>
+
+        <!-- Hamburger -->
+        <button id="openMenu" class="md:hidden cursor-pointer">
+          <img src="assets/icon-hamburger.svg" alt="">
+        </div>
+
+        <!-- Mobile Menu -->
+
+      </div>
+    </nav>
+
+      <!-- Banner -->
+      <div class="container flex flex-col space-y-12 justify-between mt-6 p-12 mx-auto md:flex-row my-auto">
+        <div class="flex flex-col mt-8 space-y-8 md:w-3/5">
+          <!-- Headline -->
+          <h1 class="text-4xl text-center font-bold font-pri text-warmGold md:text-5xl md:text-left">
+            Designing Spaces, Crafting Experience.
+          </h1>
+          <!-- Sub-Headline -->
+          <p class="text-sm text-center font-sec text-offWhite md:text-left">
+           Architecture and design that inspire.
+          </p>
+          <!-- CTA Button -->
+          <div class="flex justify-center md:justify-start">
+            <button class="px-4 py-3 text-sm bg-transparent text-offWhite border-2 border-offWhite font-pri font-bold hover:bg-warmGold hover:border-warmGold">
+              Explore Our Works
+            </button>
+          </div>
+        </div>
+
+        <!-- Background Switch -->
+        <div class="flex flex-row items-center justify-center space-x-4 space-y-0 md:flex-col md:space-y-4 md:space-x-0">          
+            <input type="radio" name="bg-btn" id="bg1" class="hidden" checked>
+            <label for="bg1" class="text-offWhite cursor-pointer" id="bgSwitch1">-01</label>
+            <input type="radio" name="bg-btn" id="bg2" class="hidden">
+            <label for="bg2" class="text-offWhite cursor-pointer" id="bgSwitch2">-02</label>
+            <input type="radio" name="bg-btn" id="bg3" class="hidden"->
+            <label for="bg3" class="text-offWhite cursor-pointer" id="bgSwitch3">-03</label>
+          </div>
+        
+      </div>
+
+     </div>
+
+     <div id="mobileMenu" class="hidden md:hidden">
+      <div class="absolute flex flex-col items-left text-offWhite space-y-6 bg-slateGray left-0 right-0 top-0 bottom-0 items-center justify-center text-2xl">
+        <button id="closeMenu" class="block absolute top-10 right-6 md:hidden">
+          <img src="assets/icon-close.svg" alt="">
+        </button>
+        <a href="#about" class="hover:text-warmGold">About</a>
+        <a href="#services" class="hover:text-warmGold">Services</a>
+        <a href="#projects" class="hover:text-warmGold">Projects</a>
+        <a href="#testimonies" class="hover:text-warmGold">Testimonies</a>
+        <a href="#hero" class="hover:text-warmGold">Blog</a>
+        <a href="#contact" class="hover:text-warmGold">Contact</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="about">
+    <!-- Flex Container -->
+    <div class="container flex flex-col mx-auto px-6 mt-24 items-center justify-around md:flex-row-reverse">
+      <!-- Text -->
+      <div class="flex flex-col space-y-6 md:w-1/2 p-8">
+        <h3 class="max-w-md font-pri text-slateGray justify-center flex text-sm items-center text-center md:text-left md:justify-start"><span class="w-6 h-1 bg-slateGray inline-block mr-4"></span>WHO WE ARE</h3>
+        <h2 class="text-softBlack font-bold font-pri text-center text-2xl md:text-left">Architecture Studios</h2>
+        <p class="max-w-sm font-pri text-slateGray text-sm text-center md:text-left">
+          <a href="#"class="hover:text-warmGold text-dotted">OA Studios</a> is a leading architectural firm that creates modern, functional spaces 
+          with a focus on both interior and exterior design. With a commitment to quality 
+          and innovation, we deliver projects that enhance the way you live and work.
+        </p>
+        <div class="hidden justify-start md:flex">
+          <button class="px-4 py-3 bg-transparent text-slateGray text-sm drop-shadow-xl border-2 border-slateGray font-pri font-bold hover:bg-warmGold hover:text-offWhite hover:border-warmGold">
+            Learn More
+          </button>
+        </div>
+
+      </div>
+      <div class="md:w-1/2 p-10">
+        <img src="images/about.jpg" alt="">
+      </div>
+      <div class="flex justify-center md:hidden">
+        <button class="px-4 py-3 bg-transparent text-slateGray text-sm drop-shadow-xl border-2 border-slateGray font-pri font-bold hover:bg-warmGold hover:text-offWhite hover:border-warmGold">
+          Learn More
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-softBlack">
+    <!-- Flex Container -->
+     <div class="container flex flex-col p-12 mt-24 mx-auto items-left space-y-8">
+      <!-- Headline -->
+       <div class="flex flex-col">
+        <h3 class="max-w-md font-sec text-warmGold justify-center flex text-sm items-center  text-center md:text-left md:justify-start"><span class="w-6 h-1 bg-warmGold inline-block mr-4"></span>WHO WE ARE</h3>
+        <h2 class="text-offWhite font-bold font-pri text-center text-2xl md:text-left mt-5">We Provide Quality Services</h2>
+      </div>
+      <!-- Services List -->
+       <div class="container grid grid-cols-1 grid-rows-4 gap-2 md:grid-cols-4 md:grid-rows-1">
+        <!-- Services 1 -->
+         <div class="flex flex-col items-left p-6 border-2 border-slateGray space-y-4 hover:border-warmGold cursor-pointer">
+          <img src="assets/architecture.svg" class="w-8" alt="">
+          <h4 class="text-warmGold font-bold font-pri">Architecture</h4>
+          <p class="text-offWhite text-sm font-pri ">
+            Tailored Designs that blend beauty and practicality.
+          </p>
+         </div>
+        <!-- Services 2 -->
+         <div class="flex flex-col items-left p-6 border-2 border-slateGray space-y-4 hover:border-warmGold cursor-pointer">
+          <img src="assets/interior.svg" class="w-8" alt="">
+          <h4 class="text-warmGold font-bold font-pri">Interior Design</h4>
+          <p class="text-offWhite text-sm font-pri">
+            Personalized interiors that reflect your style.
+          </p>
+         </div>
+        <!-- Services 3 -->
+         <div class="flex flex-col items-left p-6 border-2 border-slateGray space-y-4 hover:border-warmGold cursor-pointer">
+          <img src="assets/exterior.svg" class="w-8" alt="">
+          <h4 class="text-warmGold font-bold font-pri">Exterior Design</h4>
+          <p class="text-offWhite text-sm font-pri">
+            Innovative exteriors that connects you with nature.
+          </p>
+         </div>
+        <!-- Services 4 -->
+         <div class="flex flex-col items-left p-6 border-2 border-slateGray space-y-4 hover:border-warmGold cursor-pointer">
+          <img src="assets/consultation.svg" class="w-8" alt="">
+          <h4 class="text-warmGold font-bold font-pri">Consultation</h4>
+          <p class="text-offWhite text-sm font-pri">
+            Expert guidance for every project stage.
+          </p>
+         </div>
+       </div>
+     </div>
+  </section>
+
+  <!-- Projects Section -->
+   <section id="projects">
+    <!-- Flex Container -->
+     
+    <div class="image-card container flex flex-col mx-auto p-12 space-y-8 my-16">
+      <!-- Headline -->
+      <div class="flex flex-col items-center space-y-8 justify-center md:flex-row md:space-y-0 md:items-left">
+        <h3 class="max-w-md font-sec text-slateGray flex text-sm items-center  text-center md:text-left md:justify-start"><span class="w-6 h-1 bg-slateGray inline-block mr-4"></span>WHAT WE'VE MADE</h3>
+        <!-- Images Filter -->
+        <div class="flex items-center space-x-4 text-sm md:ml-auto md:self-end">          
+          <input type="radio" name="filter" id="filter1" class="hidden" checked>
+          <label for="filter1" class="text-slateGray" id="allProjects">All Projects</label>
+
+          <input type="radio" name="filter" id="filter2" class="hidden">
+          <label for="filter2" class="text-slateGray" id="building">Building</label>
+
+          <input type="radio" name="filter" id="filter3" class="hidden">
+          <label for="filter3" class="text-slateGray" id="interior">Interior</label>
+          
+          <input type="radio" name="filter" id="filter4" class="hidden">
+          <label for="filter4" class="text-slateGray" id="exterior">Exterior</label>
+        </div>
+      </div>
+      <!-- Images-->
+      <div class="container relative mx-auto h-[400px]">
+        <button id="prevBtn" class="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-softBlack text-offWhite px-2 py-2 rounded-full w-10 z-50 cursor-pointer">&#10094</button>
+        <!-- Slider -->
+         <div id="slider" class="container overflow-x-scroll scrollbar-thin flex gap-4 scroll-smooth py-6 mx-auto">
+          <!-- Item 1 -->
+          <div class="projectItem exterior flex-none relative">
+            <img src="images/project-1.jpg" alt="" class="object-fill w-[280px] h-[400px]">
+            <div class="img-info absolute p-4">
+              <h5 class="text-offWhite font-bold sm:w-2/3 font-pri">Jessamine King Cottage</h5>
+              <button class="text-offWhite bg-transparent text-sm flex items-center">View Project <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="projectItem interior flex-none relative">
+            <img src="images/project-2.jpg" alt="" class="object-fill w-[280px] h-[400px]">
+            <div class="img-info absolute p-4">
+              <h5 class="text-offWhite font-bold sm:w-2/3 font-pri">Jessamine King Cottage</h5>
+              <button class="text-offWhite bg-transparent text-sm flex items-center">View Project <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="projectItem exterior flex-none relative">
+            <img src="images/project-3.jpg" alt="" class="object-fill w-[280px] h-[400px]">
+            <div class="img-info absolute p-4">
+              <h5 class="text-offWhite font-bold sm:w-2/3 font-pri">Jessamine King Cottage</h5>
+              <button class="text-offWhite bg-transparent text-sm flex items-center">View Project <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="projectItem exterior flex-none relative">
+            <img src="images/project-4.jpg" alt="" class="object-fill w-[280px] h-[400px]">
+            <div class="img-info absolute p-4">
+              <h5 class="text-offWhite font-bold sm:w-2/3 font-pri">Jessamine King Cottage</h5>
+              <button class="text-offWhite bg-transparent text-sm flex items-center">View Project <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="projectItem building flex-none relative">
+            <img src="images/project-5.jpg" alt="" class="object-fill w-[280px] h-[400px]">
+            <div class="img-info absolute p-4">
+              <h5 class="text-offWhite font-bold sm:w-2/3 font-pri">Jessamine King Cottage</h5>
+              <button class="text-offWhite bg-transparent text-sm flex items-center">View Project <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="projectItem interior flex-none relative">
+            <img src="images/project-6.jpg" alt="" class="object-fill w-[280px] h-[400px]">
+            <div class="img-info absolute p-4">
+              <h5 class="text-offWhite font-bold sm:w-2/3 font-pri">Jessamine King Cottage</h5>
+              <button class="text-offWhite bg-transparent text-sm flex items-center">View Project <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+            </div>
+          </div>
+          <!-- Item 7 -->
+          <div class="projectItem building flex-none relative">
+            <img src="images/project-7.jpg" alt="" class="object-fill w-[280px] h-[400px]">
+            <div class="img-info absolute p-4">
+              <h5 class="text-offWhite font-bold sm:w-2/3 font-pri">Jessamine King Cottage</h5>
+              <button class="text-offWhite bg-transparent text-sm flex items-center">View Project <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+            </div>
+          </div>
+          <!-- Item 8 -->
+          <div class="projectItem building flex-none relative">
+            <img src="images/project-8.jpg" alt="" class="object-fill w-[280px] h-[400px]">
+            <div class="img-info absolute p-4">
+              <h5 class="text-offWhite font-bold sm:w-2/3 font-pri">Jessamine King Cottage</h5>
+              <button class="text-offWhite bg-transparent text-sm flex items-center">View Project <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+            </div>
+          </div>
+          <!-- Item 9 -->
+          <div class="projectItem interior flex-none relative">
+            <img src="images/project-9.jpg" alt="" class="object-fill w-[280px] h-[400px]">
+            <div class="img-info absolute p-4">
+              <h5 class="text-offWhite font-bold sm:w-2/3 font-pri">Jessamine King Cottage</h5>
+              <button class="text-offWhite bg-transparent text-sm flex items-center">View Project <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+            </div>
+          </div>
+         </div>
+        <button id="nextBtn" class="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-softBlack text-offWhite px-2 py-2 w-10 rounded-full z-99 cursor-pointer">&#10095</button>
+
+
+      
+    </div>
+    
+   </section>
+
+   <section id="testimonies">
+    <!-- Flex Container -->
+     
+    <div class="container flex flex-col mx-auto p-12 space-y-8 my-16">
+      <!-- Headline -->
+      <div class="flex">
+        <h3 class="max-w-md font-sec text-slateGray flex text-sm items-center  text-center md:text-left md:justify-start"><span class="w-6 h-1 bg-slateGray inline-block mr-4"></span>WHAT THEY'VE SAID</h3>
+      </div>
+      <!-- Testimonies-->
+      <div class="container relative mx-auto gap-2 grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1">
+        <!-- Testimony #1 -->
+          <div class="flex flex-col p-6 space-y-3 transition justify-between border-[1px] border-grey-200 hover:shadow-lg">
+            <p class="text-sm">
+              “OA Studios transformed our home into a modern sanctuary. Every detail was throughly crafted.”            
+            </p>
+            <p class="text-sm font-pri"><span class="font-bold">Emma R.</span>, Interior Decorator</p>
+          </div>
+        <!-- Testimony #2 -->
+          <div class="flex flex-col p-6 space-y-3 transition justify-between border-[1px] border-grey-200 hover:shadow-lg">
+            <p class="text-sm">
+              “The team at OA Studios delivered beyond our expectations. Their desgn truly reflects our brand.”            
+            </p>
+            <p class="text-sm font-pri"><span class="font-bold">David M.</span>, Business Owner</p>
+          </div>
+        <!-- Testimony #3 -->
+          <div class="flex flex-col p-4 space-y-3 transition justify-between border-[1px] border-grey-200 hover:shadow-lg">
+            <p class="text-sm">
+              “Exceptional creativity and professionalism. They made our visions a reality”            
+            </p>
+            <p class="text-sm font-pri"><span class="font-bold">Sophia T.</span>, Marketing Consultant</p>
+          </div>
+
+      
+      </div>
+
+
+      
+    </div>
+    
+   </section>
+
+   <section id="blog">
+    <!-- Flex Container -->
+     
+    <div class="container flex flex-col mx-auto p-12 space-y-8 my-16">
+      <!-- Headline -->
+      <div class="flex flex-col">
+        <h3 class="max-w-md font-sec text-slateGray flex text-sm items-center self-center md:self-start"><span class="w-6 h-1 bg-slateGray inline-block mr-4"></span>BLOG</h3>
+        <h2 class="text-softBlack font-bold font-pri text-center text-2xl md:text-left mt-5">Read Informative Articles</h2>
+      </div>
+      <!-- Blogs-->
+      <div class="blogCase relative self-center grid grid-cols-1 grid-rows-3 gap-2 md:grid-cols-3 md:grid-rows-1">
+        <!-- Blog #1 -->
+        <div class="blogItem relative">
+          <img src="images/project-1.jpg" alt="" class="">
+          <div class="img-info absolute p-4">
+            <h5 class="text-offWhite font-bold font-pri">The concrete buildings of Brutalism are beautiful</h5>
+            <button class="text-offWhite bg-transparent text-sm flex items-center">Read More <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+          </div>
+        </div>
+        <!-- Blog #2 -->
+        <div class="blogItem relative">
+          <img src="images/project-7.jpg" alt="" class="object-fill">
+          <div class="img-info absolute p-4">
+            <h5 class="text-offWhite font-bold font-pri">The concrete buildings of Brutalism are beautiful</h5>
+            <button class="text-offWhite bg-transparent text-sm flex items-center">Read More <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+          </div>
+        </div>
+        <!-- Blog #3 -->
+        <div class="blogItem relative">
+          <img src="images/project-3.jpg" alt="" class="">
+          <div class="img-info absolute p-4">
+            <h5 class="text-offWhite font-bold font-pri">The concrete buildings of Brutalism are beautiful</h5>
+            <button class="text-offWhite bg-transparent text-sm flex items-center">Read More <span class="block w-3 h-0.5 bg-offWhite"></span>&#10095</button>
+          </div>
+        </div>
+
+      </div>
+
+
+      
+    </div>
+    
+   </section>
+
+   <section id="cta" class="bg-softBlack">
+    <!-- Flex Container -->
+     <div class="flex flex-col items-center space-y-4 p-12 md:flex-row md:space-y-0 justify-between py-12">
+      <div class="flex items-start space-x-4 mt-6 mb-6">
+        <div class="hidden w-6 h-1 bg-warmGold translate-y-4 md:block"></div>
+        <div class="flex flex-col font-pri ">
+          <h2 class="text-offWhite font-bold font-pri text-center text-2xl md:text-left">Get a free consultation.</h2>
+          <h2 class="text-offWhite font-bold font-pri text-center text-2xl md:text-left mt-2">Just leave a request below</h2>
+        </div>
+      </div>
+      <form action="" class="flex ml-4 mb-6 mt-6">
+        <input type="email" name="" id="" placeholder="Your Email" class="container outline-none focus:outline-none text-[14px] p-2 px-2">
+        <button type="submit" class="bg-warmGold text-offWhite px-6 py-2 font-bold">Request</button>
+      </form>
+     </div>
+   </section>
+
+   <section id="contact">
+    <!-- Flex Container -->
+    <div class="container flex-col mx-auto p-12 my-16">
+      <div class="flex flex-col">
+        <h3 class="max-w-md font-sec text-slateGray flex text-sm items-center self-center md:self-start"><span class="w-6 h-1 bg-slateGray inline-block mr-4"></span>CONTACT US</h3>
+        <h2 class="text-softBlack font-bold font-pri text-center text-2xl md:text-left mt-5">Get in Touch with Us</h2>
+      </div>
+      <div class="relative self-center grid grid-cols-1 grid-rows-3 gap-2 mt-6 md:grid-cols-3 md:grid-rows-1">
+        
+          <div class="contactItem flex flex-col items-center md:items-left border-[1px] border-grey-200 p-6 hover:shadow-lg">
+            <img src="assets/phone.svg" alt="" class="mb-2">
+            <a href="#">0812-090-5387</a>
+            <a href="#">0812-090-5387</a>
+          </div>
+       
+          <div class="contactItem flex flex-col items-center md:items-left border-[1px] border-grey-200 p-6 hover:shadow-lg">
+            <img src="assets/mail.svg" alt="" class="mb-2">
+            <a href="#">oastudios@gmail.com</a>
+            <a href="#">xpektra7@gmail.com</a>
+          </div>
+      
+          <div class="contactItem flex flex-col items-center md:items-left border-[1px] border-grey-200 p-6 hover:shadow-lg">
+            <img src="assets/location.svg" alt="" class="mb-2">
+            <a href="#">6803 Dickens Island Apt,</a>
+            <a href="#">Port Maikaview, TX 14942</a>
+          </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="flex px-12 py-6 justify-between items-center">
+      <img src="assets/logo.svg" alt="" class="h-28 w-29">
+      <div class="flex items-center space-x-4">
+        <a href="#" class="hover:-translate-y-1">
+          <img src="assets/icon-facebook.svg" alt="">
+        </a>
+        <a href="#" class="hover:-translate-y-1">
+          <img src="assets/icon-instagram.svg" alt="">
+        </a>
+        <a href="#" class="hover:-translate-y-1">
+          <img src="assets/icon-twitter.svg" alt="">
+        </a>
+        <a href="#" class="hover:-translate-y-1">
+          <img src="assets/icon-youtube.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
