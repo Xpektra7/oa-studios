@@ -19,6 +19,20 @@
 html{
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+  height: 5px;
+  margin-top: 8px;
+}
+::-webkit-scrollbar-track{
+background-color:#2f2f2f;
+}
+::-webkit-scrollbar-thumb{
+background-color:#d4af37d5;
+}
+::-webkit-scrollbar-thumb:hover{
+background-color:#d4af33;
+}
+
 #hero{
   height:700px;
   background-image: url(/images/bg-1.webp);
