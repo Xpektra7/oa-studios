@@ -14,7 +14,7 @@
 *{
   color:#1b1b1b;
   transition: .4s ease;
-  font-family: "Poppins",system-ui;
+  font-family: "Poppins";
 }
 html{
   scroll-behavior: smooth;
@@ -32,7 +32,7 @@ h3{
   font-weight: 600;
 }
 .font-pri{
-  font-family: "Montserrat",sans-serif;
+  font-family: "Montserrat";
 }
 .font-sec{
   font-family: "Poppins";
