@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+:root {
+    /* ── Core Palette ─────────────────────────────── */
+    --green: oklch(22% 0.052 112);
+    --green-deep: oklch(13% 0.035 112);
+    --green-mid: oklch(32% 0.065 112);
+    --green-light: oklch(44% 0.072 112);
+
+    --cream: oklch(82% 0.038 62);
+    --cream-dark: oklch(72% 0.052 68);
+    --cream-muted: oklch(56% 0.034 62);
+
+    --white: oklch(91% 0.014 62);
+    --white-dim: oklch(91% 0.014 62 / 60%);
+    --white-ghost: oklch(91% 0.014 62 / 15%);
+
+    /* ── Semantic Roles ───────────────────────────── */
+    --bg: var(--green);
+    --bg-alt: var(--green-deep);
+    --bg-surface: var(--green-mid);
+
+    --text: var(--white);
+    --text-heading: var(--cream);
+    --text-muted: var(--cream-muted);
+    --text-ghost: var(--white-dim);
+
+    --accent: var(--cream-dark);
+    --accent-hover: var(--cream);
+    --accent-bg: oklch(72% 0.052 68 / 8%);
+    --accent-border: oklch(72% 0.052 68 / 25%);
+
+    /* ── Borders & Dividers ───────────────────────── */
+    --border: oklch(82% 0.038 62 / 12%);
+    --border-strong: oklch(82% 0.038 62 / 25%);
+    --border-subtle: oklch(82% 0.038 62 / 6%);
+
+    /* ── Buttons ──────────────────────────────────── */
+    --btn-primary-bg: var(--cream);
+    --btn-primary-text: var(--green);
+    --btn-primary-hover: var(--cream-dark);
+
+    --btn-ghost-text: var(--cream);
+    --btn-ghost-border: var(--border-strong);
+    --btn-ghost-hover-bg: var(--white-ghost);
+
+    /* ── Typography ───────────────────────────────── */
+    --font-display: "PP Editorial Old", "Cormorant Garamond", Georgia, serif;
+    --font-condensed:
+        "PP Neue World", "Barlow Condensed", "Arial Narrow", sans-serif;
+    --font-body: "Neue Montreal", "Barlow", system-ui, sans-serif;
+    --font-mono: ui-monospace, Consolas, monospace;
+
+    /* ── Type Scale ───────────────────────────────── */
+    --text-xs: 0.6rem;
+    --text-sm: 0.75rem;
+    --text-base: 1rem;
+    --text-md: 1.125rem;
+    --text-lg: 1.5rem;
+    --text-xl: 2.5rem;
+    --text-2xl: 4rem;
+    --text-3xl: 7rem;
+    --text-hero: clamp(4.5rem, 10vw, 9rem);
+
+    /* ── Spacing ──────────────────────────────────── */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 7rem;
+    --space-2xl: 12rem;
+
+    /* ── Layout ───────────────────────────────────── */
+    --container: 1400px;
+    --gutter: 3.5rem;
+    --gutter-sm: 1.5rem;
+    --section-gap: 10rem;
+    --nav-height: 5rem;
+
+    /* ── Letter Spacing ───────────────────────────── */
+    --tracking-tight: -0.01em;
+    --tracking-normal: 0.08em;
+    --tracking-wide: 0.18em;
+    --tracking-wider: 0.25em;
+    --tracking-widest: 0.35em;
+
+    /* ── Line Heights ─────────────────────────────── */
+    --leading-none: 0.9;
+    --leading-tight: 1.1;
+    --leading-snug: 1.35;
+    --leading-normal: 1.6;
+    --leading-loose: 1.85;
+
+    /* ── Transitions ──────────────────────────────── */
+    --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --duration-fast: 150ms;
+    --duration-base: 300ms;
+    --duration-slow: 600ms;
+    --duration-crawl: 900ms;
+
+    /* ── Shadows ──────────────────────────────────── */
+    --shadow-sm: 0 2px 8px oklch(0% 0 0 / 25%);
+    --shadow-md: 0 8px 24px oklch(0% 0 0 / 35%);
+    --shadow-lg: 0 20px 60px oklch(0% 0 0 / 50%);
+    --shadow-glow: 0 0 40px oklch(72% 0.052 68 / 8%);
+
+    /* ── Z-index Stack ────────────────────────────── */
+    --z-base: 0;
+    --z-raised: 10;
+    --z-overlay: 50;
+    --z-nav: 100;
+    --z-modal: 200;
+
+    /* ── Border Radius ────────────────────────────── */
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+    --radius-pill: 999px;
+
+    /* ── Base Styles ──────────────────────────────── */
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-normal);
+    color: var(--text);
+    background: var(--bg);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+        --gutter: var(--gutter-sm);
+        --text-hero: clamp(3.5rem, 12vw, 6rem);
+        --section-gap: 6rem;
+    }
+
+    @media (max-width: 640px) {
+        font-size: 15px;
+        --gutter: 1.25rem;
+        --text-hero: clamp(2.8rem, 14vw, 4.5rem);
+        --section-gap: 4rem;
+    }
+}
