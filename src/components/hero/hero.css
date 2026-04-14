@@ -1,0 +1,45 @@
+#hero {
+  background-image: var(--hero-bg);
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: ease-in var(--duration-base);
+}
+#ideas,
+#places {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: var(--color-white);
+    transition: ease-in var(--duration-base);
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+#hero:has(#ideas:hover) {
+  background-image: var(--ideas-bg);
+  transition: ease-in var(--duration-base);
+}
+#hero:has(#places:hover) {
+  background-image: var(--places-bg);
+  transition: ease-in-out var(--duration-base);
+}
+#hero-headline:has(#ideas:hover),
+#hero-headline:has(#places:hover) {
+  color: var(--color-white-dim);
+  transition: ease-in var(--duration-base);
+}
