@@ -5,10 +5,10 @@ import placesImg from '../../assets/images/places.webp?url'
 
 export default function Hero() {
   return (
-    <section 
-      id='hero' 
-      className="h-screen w-screen bg-bg flex flex-col justify-left"
-      style={{ 
+    <section
+      id='hero'
+      className="h-dvh w-dvw bg-bg flex flex-col justify-left"
+      style={{
         '--hero-bg': `url(${heroImg})`,
         '--ideas-bg': `url(${ideasImg})`,
         '--places-bg': `url(${placesImg})`
@@ -19,11 +19,11 @@ export default function Hero() {
         <div id='hero-headline' className="font-display text-hero leading-30 mx-0 text-white">
           <span className="inline-block mr-2 duration-300 ease-in-out">Where</span>
 
-          <span id='ideas' className="hover:text-white hover:font-italic inline-block mx-2 duration-300 ease-in-out">Ideas</span>
+          <span id='ideas' className="inline-block mx-2 duration-300 ease-in-out">Ideas</span>
           <br />
           <span className="inline-block mr-2 duration-300 ease-in-out">Becomes</span>
 
-          <span id='places' className="hover:text-white hover:font-italic inline-block mx-2 duration-300 ease-in-out">Places</span>
+          <span id='places' className="inline-block mx-2 duration-300 ease-in-out">Places</span>
 
         </div>
         <p className="text-xl font-body">Architecture and design that make

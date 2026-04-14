@@ -25,6 +25,7 @@
   }
 
   &:hover {
+    color: var(--color-white);
     &::after {
       transform: scaleX(1);
     }
