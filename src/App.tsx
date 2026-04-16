@@ -1,10 +1,12 @@
-import Hero from "./components/hero/hero";
+import About from "./components/about/about"
+import Hero from "./components/hero/hero"
 import './index.css'
 
-function App() {
-  return <>
-    <Hero />
-  </>;
+export default function App() {
+  return (
+    <main className="relative h-[300dvh]">
+      <Hero />
+      <About />
+    </main>
+  )
 }
-
-export default App;
