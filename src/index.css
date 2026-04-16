@@ -222,6 +222,9 @@
   .leading-tight-oa {
     line-height: var(--line-height-tight);
   }
+  .leading-hero {
+    line-height: var(--font-size-hero);
+  }
 
   .animate-fade-up {
     animation: var(--animate-fade-up);

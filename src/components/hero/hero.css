@@ -1,11 +1,19 @@
-#hero-bg {
-  background-image: var(--hero-bg);
+.hero-bg {
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: color;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: ease-in var(--duration-base);
+}
+#hero-bg {
+  background-image: var(--hero-bg);
+}
+#places-bg {
+  background-image: var(--places-bg);
+}
+#ideas-bg {
+  background-image: var(--ideas-bg);
 }
 #ideas,
 #places {
@@ -32,15 +40,13 @@
   }
 }
 #hero:has(#ideas:hover) {
-  > #hero-bg {
-    background-image: var(--ideas-bg);
-    transition: ease-in var(--duration-base);
+  > #ideas-bg {
+    opacity: 1;
   }
 }
 #hero:has(#places:hover) {
-  > #hero-bg {
-    background-image: var(--places-bg);
-    transition: ease-in-out var(--duration-base);
+  > #places-bg {
+    opacity: 1;
   }
 }
 #hero-headline:has(#ideas:hover),
