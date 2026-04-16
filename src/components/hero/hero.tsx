@@ -7,13 +7,14 @@ export default function Hero() {
   return (
     <section
       id='hero'
-      className="h-dvh w-dvw bg-bg flex flex-col justify-left"
+      className="h-dvh w-dvw bg-transparent flex flex-col justify-left"
       style={{
         '--hero-bg': `url(${heroImg})`,
         '--ideas-bg': `url(${ideasImg})`,
         '--places-bg': `url(${placesImg})`
       } as React.CSSProperties}
     >
+      <div id="hero-bg" className="h-full w-full absolute top-0 -z-1"></div>
       <h1 className="font-condensed font-bold uppercase p-8 text-2xl mb-auto">OA Studios — Est. 2018</h1>
       <div className="space-y-8 p-8">
         <div id='hero-headline' className="font-display text-hero leading-30 mx-0 text-white">

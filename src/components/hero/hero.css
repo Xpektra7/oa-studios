@@ -1,4 +1,4 @@
-#hero {
+#hero-bg {
   background-image: var(--hero-bg);
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: color;
@@ -32,12 +32,16 @@
   }
 }
 #hero:has(#ideas:hover) {
-  background-image: var(--ideas-bg);
-  transition: ease-in var(--duration-base);
+  > #hero-bg {
+    background-image: var(--ideas-bg);
+    transition: ease-in var(--duration-base);
+  }
 }
 #hero:has(#places:hover) {
-  background-image: var(--places-bg);
-  transition: ease-in-out var(--duration-base);
+  > #hero-bg {
+    background-image: var(--places-bg);
+    transition: ease-in-out var(--duration-base);
+  }
 }
 #hero-headline:has(#ideas:hover),
 #hero-headline:has(#places:hover) {
