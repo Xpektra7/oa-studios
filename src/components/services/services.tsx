@@ -5,32 +5,38 @@ import archImg from '../../assets/images/architecture.webp?url'
 import intImg from '../../assets/images/interior.webp?url'
 import extImg from '../../assets/images/exterior.webp?url'
 import consultImg from '../../assets/images/consultation.webp?url'
+import ServiceCard from "./service-card"
+import type { service } from "../../utils/types"
 
 export default function Services() {
 
 
-  const services = [
+  const services: service[] = [
     {
       name: 'Architecture Design',
-      bg: archImg,
-      tag: 'architecture'
+      image: archImg,
+      tag: 'architecture',
+      description: 'Structures designed to outlast trends.'
     },
     {
       name: 'Interior Design',
-      bg: intImg,
-      tag: 'interior'
+      image: intImg,
+      tag: 'interior',
+      description: 'Spaces that feel personal before designed.'
 
     },
     {
       name: 'Exterior Design',
-      bg: extImg,
-      tag: 'exterior'
+      image: extImg,
+      tag: 'exterior',
+      description: 'Form that converses with its environment.'
 
     },
     {
       name: 'Consultation Services',
-      bg: consultImg,
-      tag: 'consultation'
+      image: consultImg,
+      tag: 'consultation',
+      description: 'Clarity at every stage of the process.'
     }
   ]
 
@@ -81,24 +87,19 @@ export default function Services() {
   }, []);
 
   return (
-    <section className="relative h-dvh w-screen bg-bg p-8 flex items-center justify-center " style={{
+    <section className="relative min-h-dvh w-screen bg-bg p-8 flex items-center justify-center py-16 lg:py-0" style={{
       '--interior': `url(${intImg})`,
       '--consultation': `url(${consultImg})`,
       '--exterior': `url(${extImg})`,
       '--architecture': `url(${archImg})`
 
     } as React.CSSProperties}>
-      <div id="services" className="max-w-4xl text-center p-1" >
-        {/* <h1 className="text-5xl inline-block font-italic font-bold text-bg">Emirates Stadium</h1>
-        <h1 className="text-5xl inline-block font-italic font-bold text-bg">*</h1>
-        <h1 className="text-5xl inline-block font-italic font-bold text-bg">Allianz Arena</h1>
-        <h1 className="text-5xl inline-block font-italic font-bold text-bg">*</h1>
-        <h1 className="text-5xl inline-block font-italic font-bold text-bg">Camp Nou</h1>
-        <h1 className="text-5xl inline-block font-italic font-bold text-bg">*</h1>
-        <h1 className="text-5xl inline-block font-italic font-bold text-bg">Old Trafford</h1> */}
+      {/* // Large Screen */}
+      <div id="services" className="hidden lg:flex lg:flex-col items-center justify-center max-w-4xl text-center p-1" >
+
         {
           services.map(service => (
-            <div className="text-5xl font-italic font-bold text-cream leading-20 service" key={service.tag} id={service.tag}>
+            <div className="text-5xl font-display font-bold text-cream leading-20 service" key={service.tag} id={service.tag}>
               <h1 className="inline" >{service.name}</h1>
               <motion.div id="scope" className="w-0 h-0 -rotate-5 top-0 left-0 absolute" style={{ x: smoothMouse.x, y: smoothMouse.y }} >
                 {services.map(service => (
@@ -111,11 +112,14 @@ export default function Services() {
           )
         }
       </div>
-      {/* <motion.div id="scope" className="w-0 h-0 -rotate-5 bg-cream rounded-md top-0 left-0 absolute" style={{ x: smoothMouse.x, y: smoothMouse.y }} >
-        {services.map(service => (
-          <div key={service.name} className={`scope-bg absolute w-full h-full ${active == service.name ? '' : 'hidden'}`} style={{ background: `url(${service.bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+
+      {/* // Small Screens */}
+      <div className="flex flex-col w-full gap-8 lg:hidden">
+        {services.map((service, index) => (
+          <ServiceCard key={service.name} service={service} index={index} />
         ))}
-      </motion.div> */}
+
+      </div>
     </section >
   )
 }

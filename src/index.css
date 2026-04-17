@@ -65,8 +65,7 @@
   --color-btn-ghost-hover-bg: var(--color-white-ghost);
 
   /* ── Typography — Families ────────────────────── */
-  --font-display: "Cormorant Garamond";
-  --font-italic: "Cormorant Garamond Italic";
+  --font-display: "Cormorant Garamond Italic";
   --font-condensed: "Metal";
   --font-body: "Montserrat";
 
