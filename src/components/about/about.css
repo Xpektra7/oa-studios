@@ -1,3 +1,11 @@
 #about {
   filter: drop-shadow(10px 10px 50px rgba(0, 0, 0, 0.5));
 }
+
+@media (max-width: 767px) {
+  #about {
+    transform: none !important;
+    rotate: 0 !important;
+    scale: 1 !important;
+  }
+}

@@ -54,3 +54,11 @@
   color: var(--color-white-dim);
   transition: ease-in var(--duration-base);
 }
+
+@media (max-width: 767px) {
+  #hero {
+    transform: none !important;
+    rotate: 0 !important;
+    scale: 1 !important;
+  }
+}
