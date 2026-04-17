@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import './about.css'
-import { useScroll, useTransform, motion, type MotionStyle } from 'motion/react'
+import { useScroll, useTransform, motion } from 'motion/react'
 
 export default function About() {
 
