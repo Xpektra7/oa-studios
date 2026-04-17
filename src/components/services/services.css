@@ -1,0 +1,58 @@
+@import "tailwindcss";
+/* #services:has(.service:not(:hover)) {
+  > #scope {
+    transform: scale(0);
+    transition: ease-in-out 100ms;
+  }
+} */
+.service:hover {
+  #scope {
+    transform: rotate(10);
+    width: 28rem;
+    height: 18rem;
+    transition: ease 300ms;
+    background-color: var(--cream);
+  }
+}
+.scope-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+#interior {
+  &:hover {
+    .scope-bg {
+      display: block;
+
+      background-image: var(--interior);
+      rotate: 5deg;
+    }
+  }
+}
+#exterior {
+  &:hover {
+    .scope-bg {
+      display: block;
+      background-image: var(--exterior);
+      rotate: -15deg;
+    }
+  }
+}
+#consultation {
+  &:hover {
+    .scope-bg {
+      display: block;
+      background-image: var(--consultation);
+      rotate: 15deg;
+    }
+  }
+}
+#architecture {
+  &:hover {
+    .scope-bg {
+      display: block;
+      background-image: var(--architecture);
+      rotate: 15deg;
+    }
+  }
+}
