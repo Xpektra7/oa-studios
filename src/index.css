@@ -11,6 +11,7 @@
 @font-face {
   font-family: "Montserrat";
   src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+  font-weight: 400;
 }
 @font-face {
   font-family: "Cormorant Garamond Italic";

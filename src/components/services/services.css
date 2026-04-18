@@ -14,6 +14,16 @@
     background-color: var(--cream);
   }
 }
+/* .service:hover {
+  #cursor {
+    display: none;
+  }
+} */
+#services-container:has(.service:hover) {
+  #cursor {
+    display: none;
+  }
+}
 .scope-bg {
   background-size: cover;
   background-position: center;
@@ -23,9 +33,17 @@
   &:hover {
     .scope-bg {
       display: block;
-
       background-image: var(--interior);
       rotate: 5deg;
+      &::after {
+        content: "Spaces that feel personal before designed.";
+        position: absolute;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--font-body);
+        bottom: -4rem;
+        left: 0;
+      }
     }
   }
 }
@@ -35,6 +53,16 @@
       display: block;
       background-image: var(--exterior);
       rotate: -15deg;
+
+      &::after {
+        content: "Form that converses with its environment.";
+        position: absolute;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--font-body);
+        bottom: -4rem;
+        left: 0;
+      }
     }
   }
 }
@@ -44,6 +72,16 @@
       display: block;
       background-image: var(--consultation);
       rotate: 15deg;
+      &::after {
+        content: "Clarity at every stage of the process.";
+        position: absolute;
+        font-size: 1rem;
+        text-overflow: clip;
+        font-weight: 400;
+        font-family: var(--font-body);
+        bottom: -4rem;
+        left: 0;
+      }
     }
   }
 }
@@ -53,6 +91,15 @@
       display: block;
       background-image: var(--architecture);
       rotate: 15deg;
+      &::after {
+        content: "Structures designed to outlast trends.";
+        position: absolute;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--font-body);
+        top: -4rem;
+        left: 0;
+      }
     }
   }
 }

@@ -9,15 +9,15 @@ export default function About() {
     target: containerRef,
     offset: ["start end", "end end"]
   });
-  
+
   const rotate = useTransform(scrollYProgress, [0, 1], [-8, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
   return (
-    <motion.section 
+    <motion.section
       ref={containerRef}
-      id="about" 
-      className="sticky h-dvh top-0 w-screen bg-cream p-8 space-y-8"
+      id="about"
+      className="sticky h-dvh  mb-64 top-0 w-screen bg-cream p-8 space-y-8"
       style={{ rotate, scale }}
     >
       <h1 className="text-5xl font-display font-bold text-bg">About OA Studios</h1>

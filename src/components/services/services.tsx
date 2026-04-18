@@ -53,8 +53,8 @@ export default function Services() {
     }
 
     useEffect(() => {
-      window.addEventListener('mousemove', mousemove);
-      return () => window.removeEventListener('mousemove', mousemove);
+      document.getElementById('services').addEventListener('mousemove', mousemove);
+      return () => document.getElementById('services').removeEventListener('mousemove', mousemove);
     }, []);
 
     return mouse;
@@ -87,7 +87,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section className="relative min-h-dvh w-screen bg-bg p-8 flex items-center justify-center py-16 lg:py-0" style={{
+    <section id="services" className="relative min-h-dvh w-screen bg-bg p-8 flex items-center justify-center py-16 lg:py-0" style={{
       '--interior': `url(${intImg})`,
       '--consultation': `url(${consultImg})`,
       '--exterior': `url(${extImg})`,
@@ -95,22 +95,27 @@ export default function Services() {
 
     } as React.CSSProperties}>
       {/* // Large Screen */}
-      <div id="services" className="hidden lg:flex lg:flex-col items-center justify-center max-w-4xl text-center p-1" >
+      <div id="services-container" className="hidden lg:flex lg:flex-col items-center justify-center max-w-4xl text-center p-1" >
+
 
         {
           services.map(service => (
-            <div className="text-5xl font-display font-bold text-cream leading-20 service" key={service.tag} id={service.tag}>
+            <div className="text-5xl font-condensed font-bold text-cream leading-20 service" key={service.tag} id={service.tag}>
               <h1 className="inline" >{service.name}</h1>
               <motion.div id="scope" className="w-0 h-0 -rotate-5 top-0 left-0 absolute" style={{ x: smoothMouse.x, y: smoothMouse.y }} >
                 {services.map(service => (
-                  <div key={service.name} className={`scope-bg bg-cream! absolute w-full h-full hidden`} ></div>
+                  <div key={service.name} className={`scope-bg bg-cream! absolute w-full h-full hidden`}></div>
                 ))}
               </motion.div>
-
             </div>
           )
           )
         }
+        <motion.div id="cursor" className="-rotate-5 top-0 left-0 absolute" style={{ x: smoothMouse.x, y: smoothMouse.y }} >
+          <h1 className="text-3xl font-display font-bold text-cream">Our Services</h1>
+        </motion.div>
+
+
       </div>
 
       {/* // Small Screens */}
