@@ -53,8 +53,8 @@ export default function Services() {
     }
 
     useEffect(() => {
-      document.getElementById('services').addEventListener('mousemove', mousemove);
-      return () => document.getElementById('services').removeEventListener('mousemove', mousemove);
+      document.getElementById('services')?.addEventListener('mousemove', mousemove);
+      return () => document.getElementById('services')?.removeEventListener('mousemove', mousemove);
     }, []);
 
     return mouse;
@@ -119,7 +119,9 @@ export default function Services() {
       </div>
 
       {/* // Small Screens */}
-      <div className="flex flex-col w-full gap-8 lg:hidden">
+      <div className="flex flex-col w-full py-16 gap-16 lg:hidden">
+        <h1 className="text-5xl font-condensed font-bold text-cream">Our Services</h1>
+
         {services.map((service, index) => (
           <ServiceCard key={service.name} service={service} index={index} />
         ))}

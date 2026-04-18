@@ -5,7 +5,7 @@ import './index.css'
 
 export default function App() {
   return (
-    <main className="relative h-[300dvh]">
+    <main className="relative min-h-[200dvh]">
       <Hero />
       <About />
       <Services />
