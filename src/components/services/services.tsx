@@ -111,8 +111,8 @@ export default function Services() {
           )
           )
         }
-        <motion.div id="cursor" className="-rotate-5 top-0 left-0 absolute" style={{ x: smoothMouse.x, y: smoothMouse.y }} >
-          <h1 className="text-3xl font-display font-bold text-cream">Our Services</h1>
+        <motion.div id="cursor" className="-rotate-5 top-0 left-0 absolute bg-cream p-2 px-4" style={{ x: smoothMouse.x, y: smoothMouse.y }} >
+          <h1 className="text-2xl font-display font-bold text-bg">— WHAT WE DO</h1>
         </motion.div>
 
 
@@ -120,7 +120,10 @@ export default function Services() {
 
       {/* // Small Screens */}
       <div className="flex flex-col w-full py-16 gap-16 lg:hidden">
-        <h1 className="text-5xl font-condensed font-bold text-cream">Our Services</h1>
+        <div className="space-y-8">
+          <h1 className="text-2xl font-display font-bold text-cream tracking-widest">— WHAT WE DO</h1>
+          <h1 className="text-5xl font-condensed font-bold text-cream">Ways we bring your vision to life.</h1>
+        </div>
 
         {services.map((service, index) => (
           <ServiceCard key={service.name} service={service} index={index} />
