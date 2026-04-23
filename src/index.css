@@ -80,7 +80,7 @@
   --font-size-xl: 2.5rem;
   --font-size-2xl: 4rem;
   --font-size-3xl: 7rem;
-  --font-size-hero: clamp(4.5rem, 10vw, 7rem);
+  --font-size-hero: clamp(4.5rem, 10vw, 6.5rem);
 
   /* ── Typography — Tracking ────────────────────── */
   --letter-spacing-tight: -0.01em;

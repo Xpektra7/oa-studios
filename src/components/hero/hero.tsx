@@ -26,11 +26,11 @@ export default function Hero() {
         <div id='hero-headline' className="font-condensed text-center text-hero leading-hero mx-0 text-white">
           <span className="inline-block mr-2 duration-300 ease-in-out">Where</span>
 
-          <span id='ideas' className="inline-block mx-2 duration-300 ease-in-out">ideas</span>
+          <span id='ideas' className="inline-block mx-2 underline underline-offset-16 hover:no-underline duration-300 ease-in-out">ideas</span>
           <br />
           <span className="inline-block mr-2 duration-300 ease-in-out">becomes</span>
 
-          <span id='places' className="inline-block mx-2 duration-300 ease-in-out">spaces</span>
+          <span id='places' className="inline-block mx-2 underline underline-offset-16 hover:no-underline duration-300 ease-in-out">spaces</span>
 
         </div>
         <p className="text-xl text-center font-body">Architecture and design that make people feel something.</p>

@@ -1,0 +1,32 @@
+#projects-container:has(.project:hover) {
+  > .project {
+    opacity: 0.25;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.project {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: var(--color-bg);
+    transition: ease-in var(--duration-base);
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}

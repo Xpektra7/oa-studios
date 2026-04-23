@@ -42,7 +42,7 @@ export default function About() {
             <StatCounter target={7} suffix="" label="Awards Won" />
           </div>
         </div>
-        <div className="col-span-1 w-full lg:w-3/4 mx-auto h-96 lg:h-200" id='about-img'></div>
+        <div className="col-span-1 w-full lg:w-3/4 mx-auto h-96 lg:h-full" id='about-img'></div>
         <div className="block w-full h-24 bg-cream lg:hidden"></div>
       </div>
     </motion.section>
