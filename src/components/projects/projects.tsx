@@ -63,7 +63,7 @@ export default function Projects() {
         } as React.CSSProperties
       }
     >
-      <h1 className="font-condensed font-bold text-xl">— OUR WORK</h1>
+      <h1 className="font-condensed font-bold text-xl">— OUR WORKS</h1>
       <div
         className="max-w-4xl px-8 flex gap-4 flex-wrap justify-center text-center"
         id="projects-container"
