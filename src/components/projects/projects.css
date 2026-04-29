@@ -1,32 +1,67 @@
-#projects-container:has(.project:hover) {
-  > .project {
-    opacity: 0.25;
+#projects,
+.project-bg {
+    background-image: var(--default-bg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: color;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 300ms ease-in-out;
+}
+#cottage-bg {
+    background-image: var(--cottage-bg);
+}
+#halcyon-bg {
+    background-image: var(--halcyon-bg);
+}
+#osei-bg {
+    background-image: var(--osei-bg);
+}
+#linne-bg {
+    background-image: var(--linne-bg);
+}
+#verte-bg {
+    background-image: var(--verte-bg);
+}
+#meridian-bg {
+    background-image: var(--meridian-bg);
+}
 
-    &:hover {
-      opacity: 1;
+#projects-container {
+    pointer-events: none;
+}
+
+#projects:has(.project:hover) {
+    .project {
+        opacity: 0.25;
+        pointer-events: auto;
+
+        &:hover {
+            opacity: 1;
+        }
     }
-  }
+}
+
+#projects:has(#cottage:hover) > #cottage-bg {
+    opacity: 1;
+}
+#projects:has(#halcyon:hover) > #halcyon-bg {
+    opacity: 1;
+}
+#projects:has(#linne:hover) > #linne-bg {
+    opacity: 1;
+}
+#projects:has(#verte:hover) > #verte-bg {
+    opacity: 1;
+}
+#projects:has(#osei:hover) > #osei-bg {
+    opacity: 1;
+}
+#projects:has(#meridian:hover) > #meridian-bg {
+    opacity: 1;
 }
 
 .project {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    height: 1px;
-    width: 100%;
-    transform: scaleX(0);
-    transform-origin: left;
-    background-color: var(--color-bg);
-    transition: ease-in var(--duration-base);
-  }
-
-  &:hover {
-    &::after {
-      transform: scaleX(1);
-    }
-  }
+    position: relative;
+    pointer-events: auto;
 }

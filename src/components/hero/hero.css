@@ -1,64 +1,80 @@
 .hero-bg {
-  background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: color;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: ease-in var(--duration-base);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: color;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: ease-in var(--duration-base);
 }
 #hero-bg {
-  background-image: var(--hero-bg);
+    background-image: var(--hero-bg);
 }
 #places-bg {
-  background-image: var(--places-bg);
+    background-image: var(--places-bg);
 }
 #ideas-bg {
-  background-image: var(--ideas-bg);
+    background-image: var(--ideas-bg);
 }
 #ideas,
 #places {
-  position: relative;
+    position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    height: 4px;
-    width: 100%;
-    transform: scaleX(0);
-    transform-origin: left;
-    background-color: var(--color-white);
-    transition: ease-in var(--duration-base);
-  }
-
-  &:hover {
-    color: var(--color-white);
     &::after {
-      transform: scaleX(1);
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        transform: scaleX(0);
+        opacity: 0.8;
+        transform-origin: left;
+        background-color: var(--color-white);
+        transition: ease-in var(--duration-base);
     }
-  }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        opacity: 0.8;
+        transform-origin: left;
+        background-color: var(--color-white);
+        /*transition: ease-in var(--duration-base);*/
+    }
+
+    &:hover {
+        color: var(--color-white);
+        &::after {
+            transform: scaleX(1);
+        }
+        &::before {
+            opacity: 0;
+        }
+    }
 }
 #hero:has(#ideas:hover) {
-  > #ideas-bg {
-    opacity: 1;
-  }
+    > #ideas-bg {
+        opacity: 1;
+    }
 }
 #hero:has(#places:hover) {
-  > #places-bg {
-    opacity: 1;
-  }
+    > #places-bg {
+        opacity: 1;
+    }
 }
 #hero-headline:has(#ideas:hover),
 #hero-headline:has(#places:hover) {
-  color: var(--color-white-dim);
-  transition: ease-in var(--duration-base);
+    color: var(--color-white-dim);
+    transition: ease-in var(--duration-base);
 }
 
 @media (max-width: 767px) {
-  #hero {
-    transform: none !important;
-    rotate: 0 !important;
-    scale: 1 !important;
-  }
+    #hero {
+        transform: none !important;
+        rotate: 0 !important;
+        scale: 1 !important;
+    }
 }

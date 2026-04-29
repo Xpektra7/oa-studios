@@ -1,292 +1,292 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Inter";
-  src: url("./assets/fonts/Inter-VariableFont_opsz,wght.ttf");
+    font-family: "Inter";
+    src: url("./assets/fonts/Inter-VariableFont_opsz,wght.ttf");
 }
 @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("./assets/fonts/CormorantGaramond-VariableFont_wght.ttf");
+    font-family: "Cormorant Garamond";
+    src: url("./assets/fonts/CormorantGaramond-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
-  font-weight: 400;
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+    font-weight: 400;
 }
 @font-face {
-  font-family: "Cormorant Garamond Italic";
-  src: url("./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf");
+    font-family: "Cormorant Garamond Italic";
+    src: url("./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: "Metal";
-  src: url("./assets/fonts/Metal-Regular.ttf");
+    font-family: "Metal";
+    src: url("./assets/fonts/Metal-Regular.ttf");
 }
 
 @theme {
-  /* ── Core Palette ─────────────────────────────── */
-  --color-green: oklch(22% 0.052 112);
-  --color-green-deep: oklch(13% 0.035 112);
-  --color-green-mid: oklch(32% 0.065 112);
-  --color-green-light: oklch(44% 0.072 112);
+    /* ── Core Palette ─────────────────────────────── */
+    --color-green: oklch(22% 0.052 112);
+    --color-green-deep: oklch(13% 0.035 112);
+    --color-green-mid: oklch(32% 0.065 112);
+    --color-green-light: oklch(44% 0.072 112);
 
-  --color-cream: oklch(82% 0.038 62);
-  --color-cream-dark: oklch(72% 0.052 68);
-  --color-cream-muted: oklch(56% 0.034 62);
+    --color-cream: oklch(82% 0.038 62);
+    --color-cream-dark: oklch(72% 0.052 68);
+    --color-cream-muted: oklch(56% 0.034 62);
 
-  --color-white: oklch(91% 0.014 62);
-  --color-white-dim: oklch(91% 0.014 62 / 60%);
-  --color-white-ghost: oklch(91% 0.014 62 / 15%);
+    --color-white: oklch(91% 0.014 62);
+    --color-white-dim: oklch(91% 0.014 62 / 60%);
+    --color-white-ghost: oklch(91% 0.014 62 / 15%);
 
-  /* ── Semantic Roles ───────────────────────────── */
-  --color-bg: var(--color-green);
-  --color-bg-alt: var(--color-green-deep);
-  --color-bg-surface: var(--color-green-mid);
+    /* ── Semantic Roles ───────────────────────────── */
+    --color-bg: var(--color-green);
+    --color-bg-alt: var(--color-green-deep);
+    --color-bg-surface: var(--color-green-mid);
 
-  --color-text: var(--color-white);
-  --color-text-heading: var(--color-cream);
-  --color-text-muted: var(--color-cream-muted);
-  --color-text-ghost: var(--color-white-dim);
+    --color-text: var(--color-white);
+    --color-text-heading: var(--color-cream);
+    --color-text-muted: var(--color-cream-muted);
+    --color-text-ghost: var(--color-white-dim);
 
-  --color-accent: var(--color-cream-dark);
-  --color-accent-hover: var(--color-cream);
-  --color-accent-bg: oklch(72% 0.052 68 / 8%);
-  --color-accent-border: oklch(72% 0.052 68 / 25%);
+    --color-accent: var(--color-cream-dark);
+    --color-accent-hover: var(--color-cream);
+    --color-accent-bg: oklch(72% 0.052 68 / 8%);
+    --color-accent-border: oklch(72% 0.052 68 / 25%);
 
-  /* ── Borders ──────────────────────────────────── */
-  --color-border: oklch(82% 0.038 62 / 12%);
-  --color-border-strong: oklch(82% 0.038 62 / 25%);
-  --color-border-subtle: oklch(82% 0.038 62 / 6%);
+    /* ── Borders ──────────────────────────────────── */
+    --color-border: oklch(82% 0.038 62 / 12%);
+    --color-border-strong: oklch(82% 0.038 62 / 25%);
+    --color-border-subtle: oklch(82% 0.038 62 / 6%);
 
-  /* ── Buttons ──────────────────display────────────────── */
-  --color-btn-primary-bg: var(--color-cream);
-  --color-btn-primary-text: var(--color-green);
-  --color-btn-primary-hover: var(--color-cream-dark);
-  --color-btn-ghost-text: var(--color-cream);
-  --color-btn-ghost-border: var(--color-border-strong);
-  --color-btn-ghost-hover-bg: var(--color-white-ghost);
+    /* ── Buttons ──────────────────display────────────────── */
+    --color-btn-primary-bg: var(--color-cream);
+    --color-btn-primary-text: var(--color-green);
+    --color-btn-primary-hover: var(--color-cream-dark);
+    --color-btn-ghost-text: var(--color-cream);
+    --color-btn-ghost-border: var(--color-border-strong);
+    --color-btn-ghost-hover-bg: var(--color-white-ghost);
 
-  /* ── Typography — Families ────────────────────── */
-  --font-display: "Cormorant Garamond Italic";
-  --font-condensed: "Metal";
-  --font-body: "Montserrat";
+    /* ── Typography — Families ────────────────────── */
+    --font-display: "Cormorant Garamond Italic";
+    --font-condensed: "Metal";
+    --font-body: "Montserrat";
 
-  /* ── Typography — Size Scale ──────────────────── */
-  --font-size-2xs: 0.6rem;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-md: 1.125rem;
-  --font-size-lg: 1.5rem;
-  --font-size-xl: 2.5rem;
-  --font-size-2xl: 4rem;
-  --font-size-3xl: 7rem;
-  --font-size-hero: clamp(4.5rem, 10vw, 6.5rem);
+    /* ── Typography — Size Scale ──────────────────── */
+    --font-size-2xs: 0.6rem;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 2.5rem;
+    --font-size-2xl: 4rem;
+    --font-size-3xl: 7rem;
+    --font-size-hero: clamp(4.5rem, 10vw, 6.5rem);
 
-  /* ── Typography — Tracking ────────────────────── */
-  --letter-spacing-tight: -0.01em;
-  --letter-spacing-normal: 0.08em;
-  --letter-spacing-wide: 0.18em;
-  --letter-spacing-wider: 0.25em;
-  --letter-spacing-widest: 0.35em;
+    /* ── Typography — Tracking ────────────────────── */
+    --letter-spacing-tight: -0.01em;
+    --letter-spacing-normal: 0.08em;
+    --letter-spacing-wide: 0.18em;
+    --letter-spacing-wider: 0.25em;
+    --letter-spacing-widest: 0.35em;
 
-  /* ── Typography — Leading ─────────────────────── */
-  --line-height-none: 0.9;
-  --line-height-tight: 1.1;
-  --line-height-snug: 1.35;
-  --line-height-normal: 1.6;
-  --line-height-loose: 1.85;
+    /* ── Typography — Leading ─────────────────────── */
+    --line-height-none: 0.9;
+    --line-height-tight: 1.1;
+    --line-height-snug: 1.35;
+    --line-height-normal: 1.6;
+    --line-height-loose: 1.85;
 
-  /* ── Spacing ──────────────────────────────────── */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 7rem;
-  --spacing-2xl: 12rem;
-  --spacing-gutter: 3.5rem;
-  --spacing-gutter-sm: 1.5rem;
-  --spacing-section: 10rem;
+    /* ── Spacing ──────────────────────────────────── */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 7rem;
+    --spacing-2xl: 12rem;
+    --spacing-gutter: 3.5rem;
+    --spacing-gutter-sm: 1.5rem;
+    --spacing-section: 10rem;
 
-  /* ── Layout ───────────────────────────────────── */
-  --width-container: 1400px;
-  --height-nav: 5rem;
+    /* ── Layout ───────────────────────────────────── */
+    --width-container: 1400px;
+    --height-nav: 5rem;
 
-  /* ── Border Radius ────────────────────────────── */
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 8px;
-  --radius-pill: 9999px;
+    /* ── Border Radius ────────────────────────────── */
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+    --radius-pill: 9999px;
 
-  /* ── Shadows ──────────────────────────────────── */
-  --shadow-sm: 0 2px 8px oklch(0% 0 0 / 25%);
-  --shadow-md: 0 8px 24px oklch(0% 0 0 / 35%);
-  --shadow-lg: 0 20px 60px oklch(0% 0 0 / 50%);
-  --shadow-glow: 0 0 40px oklch(72% 0.052 68 / 8%);
+    /* ── Shadows ──────────────────────────────────── */
+    --shadow-sm: 0 2px 8px oklch(0% 0 0 / 25%);
+    --shadow-md: 0 8px 24px oklch(0% 0 0 / 35%);
+    --shadow-lg: 0 20px 60px oklch(0% 0 0 / 50%);
+    --shadow-glow: 0 0 40px oklch(72% 0.052 68 / 8%);
 
-  /* ── Transitions — Easing ─────────────────────── */
-  --ease-default: cubic-bezier(0.25, 0.1, 0.25, 1);
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* ── Transitions — Easing ─────────────────────── */
+    --ease-default: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* ── Transitions — Duration ───────────────────── */
-  --duration-fast: 150ms;
-  --duration-base: 300ms;
-  --duration-slow: 600ms;
-  --duration-crawl: 900ms;
+    /* ── Transitions — Duration ───────────────────── */
+    --duration-fast: 150ms;
+    --duration-base: 300ms;
+    --duration-slow: 600ms;
+    --duration-crawl: 900ms;
 
-  /* ── Z-index ──────────────────────────────────── */
-  --z-index-base: 0;
-  --z-index-raised: 10;
-  --z-index-overlay: 50;
-  --z-index-nav: 100;
-  --z-index-modal: 200;
+    /* ── Z-index ──────────────────────────────────── */
+    --z-index-base: 0;
+    --z-index-raised: 10;
+    --z-index-overlay: 50;
+    --z-index-nav: 100;
+    --z-index-modal: 200;
 
-  /* ── Animations ───────────────────────────────── */
-  --animate-fade-up: fade-up var(--duration-slow) var(--ease-out) both;
+    /* ── Animations ───────────────────────────────── */
+    --animate-fade-up: fade-up var(--duration-slow) var(--ease-out) both;
 
-  @keyframes fade-up {
-    from {
-      opacity: 0;
-      translate: 0 24px;
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            translate: 0 24px;
+        }
+        to {
+            opacity: 1;
+            translate: 0 0;
+        }
     }
-    to {
-      opacity: 1;
-      translate: 0 0;
-    }
-  }
 }
 
 /* ── Base Layer ─────────────────────────────────── */
 @layer base {
-  html {
-    font-family: var(--font-family-body);
-    font-size: 18px;
-    line-height: var(--line-height-normal);
-    letter-spacing: var(--letter-spacing-normal);
-    color: var(--color-text);
-    cursor: url(./assets/cursor.png), auto;
-    background: var(--color-bg);
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    html {
+        font-family: var(--font-family-body);
+        font-size: 18px;
+        line-height: var(--line-height-normal);
+        letter-spacing: var(--letter-spacing-normal);
+        color: var(--color-text);
+        /*cursor: url(./assets/cursor.png), auto;*/
+        background: var(--color-bg);
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 
-    @media (width < 1024px) {
-      font-size: 16px;
+        @media (width < 1024px) {
+            font-size: 16px;
+        }
+        @media (width < 640px) {
+            font-size: 15px;
+        }
     }
-    @media (width < 640px) {
-      font-size: 15px;
-    }
-  }
 
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      transition-duration: 0.01ms !important;
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        }
     }
-  }
 }
 
 /* ── Utilities ──────────────────────────────────── */
 @layer utilities {
-  .font-display {
-    font-family: var(--font-display), serif;
-  }
-  .font-condensed {
-    font-family: var(--font-condensed), sans-serif;
-  }
-
-  .text-hero {
-    font-size: var(--font-size-hero);
-  }
-  .text-3xl-oa {
-    font-size: var(--font-size-3xl);
-  }
-
-  .tracking-widest-oa {
-    letter-spacing: var(--letter-spacing-widest);
-  }
-  .tracking-wider-oa {
-    letter-spacing: var(--letter-spacing-wider);
-  }
-  .tracking-wide-oa {
-    letter-spacing: var(--letter-spacing-wide);
-  }
-
-  .leading-none-oa {
-    line-height: var(--line-height-none);
-  }
-  .leading-tight-oa {
-    line-height: var(--line-height-tight);
-  }
-  .leading-hero {
-    line-height: var(--font-size-hero);
-  }
-
-  .animate-fade-up {
-    animation: var(--animate-fade-up);
-  }
-
-  .section-padding {
-    padding-inline: var(--spacing-gutter);
-    padding-block: var(--spacing-section);
-  }
-
-  .container-oa {
-    width: 100%;
-    max-width: var(--width-container);
-    margin-inline: auto;
-    padding-inline: var(--spacing-gutter);
-
-    @media (width < 1024px) {
-      padding-inline: var(--spacing-gutter-sm);
+    .font-display {
+        font-family: var(--font-display), serif;
     }
-    @media (width < 640px) {
-      padding-inline: 1.25rem;
+    .font-condensed {
+        font-family: var(--font-condensed), sans-serif;
     }
-  }
 
-  .section-label {
-    font-family: var(--font-family-condensed);
-    font-size: var(--font-size-2xs);
-    font-weight: 500;
-    letter-spacing: var(--letter-spacing-widest);
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-  }
-
-  .btn-primary {
-    font-family: var(--font-family-condensed);
-    font-size: var(--font-size-xs);
-    font-weight: 600;
-    letter-spacing: var(--letter-spacing-wide);
-    text-transform: uppercase;
-    color: var(--color-btn-primary-text);
-    background: var(--color-btn-primary-bg);
-    padding: 0.65rem 1.6rem;
-    transition: background var(--duration-base) var(--ease-default);
-
-    &:hover {
-      background: var(--color-btn-primary-hover);
+    .text-hero {
+        font-size: var(--font-size-hero);
     }
-  }
-
-  .btn-ghost {
-    font-family: var(--font-family-condensed);
-    font-size: var(--font-size-xs);
-    font-weight: 600;
-    letter-spacing: var(--letter-spacing-wide);
-    text-transform: uppercase;
-    color: var(--color-btn-ghost-text);
-    border: 1px solid var(--color-btn-ghost-border);
-    padding: 0.65rem 1.6rem;
-    transition: background var(--duration-base) var(--ease-default);
-
-    &:hover {
-      background: var(--color-btn-ghost-hover-bg);
+    .text-3xl-oa {
+        font-size: var(--font-size-3xl);
     }
-  }
+
+    .tracking-widest-oa {
+        letter-spacing: var(--letter-spacing-widest);
+    }
+    .tracking-wider-oa {
+        letter-spacing: var(--letter-spacing-wider);
+    }
+    .tracking-wide-oa {
+        letter-spacing: var(--letter-spacing-wide);
+    }
+
+    .leading-none-oa {
+        line-height: var(--line-height-none);
+    }
+    .leading-tight-oa {
+        line-height: var(--line-height-tight);
+    }
+    .leading-hero {
+        line-height: var(--font-size-hero);
+    }
+
+    .animate-fade-up {
+        animation: var(--animate-fade-up);
+    }
+
+    .section-padding {
+        padding-inline: var(--spacing-gutter);
+        padding-block: var(--spacing-section);
+    }
+
+    .container-oa {
+        width: 100%;
+        max-width: var(--width-container);
+        margin-inline: auto;
+        padding-inline: var(--spacing-gutter);
+
+        @media (width < 1024px) {
+            padding-inline: var(--spacing-gutter-sm);
+        }
+        @media (width < 640px) {
+            padding-inline: 1.25rem;
+        }
+    }
+
+    .section-label {
+        font-family: var(--font-family-condensed);
+        font-size: var(--font-size-2xs);
+        font-weight: 500;
+        letter-spacing: var(--letter-spacing-widest);
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+    }
+
+    .btn-primary {
+        font-family: var(--font-family-condensed);
+        font-size: var(--font-size-xs);
+        font-weight: 600;
+        letter-spacing: var(--letter-spacing-wide);
+        text-transform: uppercase;
+        color: var(--color-btn-primary-text);
+        background: var(--color-btn-primary-bg);
+        padding: 0.65rem 1.6rem;
+        transition: background var(--duration-base) var(--ease-default);
+
+        &:hover {
+            background: var(--color-btn-primary-hover);
+        }
+    }
+
+    .btn-ghost {
+        font-family: var(--font-family-condensed);
+        font-size: var(--font-size-xs);
+        font-weight: 600;
+        letter-spacing: var(--letter-spacing-wide);
+        text-transform: uppercase;
+        color: var(--color-btn-ghost-text);
+        border: 1px solid var(--color-btn-ghost-border);
+        padding: 0.65rem 1.6rem;
+        transition: background var(--duration-base) var(--ease-default);
+
+        &:hover {
+            background: var(--color-btn-ghost-hover-bg);
+        }
+    }
 }
