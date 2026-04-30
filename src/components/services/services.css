@@ -8,8 +8,8 @@
 .service:hover {
   #scope {
     transform: rotate(10);
-    width: 24rem;
-    height: 14rem;
+    width: 20rem;
+    height: 12rem;
     transition: ease 300ms;
     background-color: var(--cream);
   }
@@ -38,7 +38,7 @@
       &::after {
         content: "Spaces that feel personal before designed.";
         position: absolute;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         font-weight: 400;
         font-family: var(--font-body);
         bottom: -4rem;
@@ -57,7 +57,7 @@
       &::after {
         content: "Form that converses with its environment.";
         position: absolute;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         font-weight: 400;
         text-overflow: clip;
 
@@ -77,7 +77,7 @@
       &::after {
         content: "Clarity at every stage of the process.";
         position: absolute;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         text-overflow: clip;
         font-weight: 400;
         font-family: var(--font-body);
@@ -96,7 +96,7 @@
       &::after {
         content: "Structures designed to outlast trends.";
         position: absolute;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         font-weight: 400;
         text-overflow: clip;
 

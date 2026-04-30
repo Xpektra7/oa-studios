@@ -108,7 +108,7 @@ export default function Services() {
       >
         {services.map((service) => (
           <div
-            className="text-5xl font-display font-semibold text-cream leading-20 service"
+            className="text-4xl font-display font-semibold text-cream leading-20 service"
             key={service.tag}
             id={service.tag}
           >

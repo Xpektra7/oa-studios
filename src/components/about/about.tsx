@@ -22,11 +22,11 @@ export default function About() {
       style={{ rotate, scale }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-1 gap-16 w-full">
-        <div className="space-y-8 col-span-1">
-          <h1 className="text-2xl font-display font-bold text-bg tracking-widest">
+        <div className="space-y-8 col-span-1 text-sm">
+          <h1 className="text-xl font-display font-bold text-bg tracking-widest">
             — WHO WE ARE
           </h1>
-          <h1 className="text-5xl font-condensed font-bold text-bg">
+          <h1 className="text-4xl font-condensed font-bold text-bg">
             We build the spaces between ambition and reality.
           </h1>
 
@@ -48,7 +48,7 @@ export default function About() {
           </div>
         </div>
         <div
-          className="col-span-1 w-full lg:w-3/4 mx-auto h-96 lg:h-full"
+          className="col-span-1 w-full lg:w-3/4 mx-auto h-96 lg:h-4/5 self-center"
           id="about-img"
         ></div>
         <div className="block w-full h-24 bg-cream lg:hidden"></div>

@@ -28,7 +28,7 @@ export default function StatCounter({ target, suffix = '', label }: StatCounterP
       className="flex flex-col items-center"
       style={{ borderTop: '1px solid var(--color-border)', paddingTop: '0.5rem' }}
     >
-      <span className="text-6xl font-condensed font-bold text-bg">
+      <span className="text-4xl font-condensed font-bold text-bg">
         {displayValue}{suffix}
       </span>
       <span className="text-base text-center font-body text-bg-alt mt-2">{label}</span>
