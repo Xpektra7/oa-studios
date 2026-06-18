@@ -1,0 +1,56 @@
+/* ── Office background overlays ── */
+
+.office-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-color: oklch(13% 0.035 112 / 0.75);
+  background-blend-mode: multiply;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#lagos-bg {
+  background-image: var(--lagos-bg);
+}
+
+#london-bg {
+  background-image: var(--london-bg);
+}
+
+#accra-bg {
+  background-image: var(--accra-bg);
+}
+
+/* ── Toggle background on office hover ── */
+
+#contact-footer:has(#office-lagos:hover) > #lagos-bg {
+  opacity: 1;
+}
+
+#contact-footer:has(#office-london:hover) > #london-bg {
+  opacity: 1;
+}
+
+#contact-footer:has(#office-accra:hover) > #accra-bg {
+  opacity: 1;
+}
+
+/* ── Drowning effect (entire section) ── */
+
+#contact-footer:has(.office:hover) .contact-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease, visibility 300ms ease;
+  pointer-events: none;
+}
+
+#contact-footer:has(.office:hover) .office:hover .office-text {
+  opacity: 1;
+  visibility: visible;
+  color: var(--color-white);
+  pointer-events: auto;
+}

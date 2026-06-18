@@ -13,43 +13,44 @@ export default function Process() {
     {
       title: "Discovery",
       image: discoveryImg,
-      description: "We listen before we draw.Every project begins with understanding — your vision, your constraints, your life."
+      description:
+        "We listen before we draw.Every project begins with understanding — your vision, your constraints, your life.",
     },
     {
       title: "Concept",
       image: conceptImg,
-      description: "From mood boards to initial sketches, we translate conversation into spatial language."
+      description:
+        "From mood boards to initial sketches, we translate conversation into spatial language.",
     },
     {
       title: "Design Development",
       image: designImg,
-      description: "Technical drawings, material selections, and 3D renders refine the concept into a buildable reality."
+      description:
+        "Technical drawings, material selections, and 3D renders refine the concept into a buildable reality.",
     },
     {
       title: "Construction",
       image: constructionImg,
-      description: "Our team remains on - site throughout the build — overseeing every contractor, every finish."
+      description:
+        "Our team remains on - site throughout the build — overseeing every contractor, every finish.",
     },
     {
       title: "Handover",
       image: handoffImg,
-      description: "We walk you through every detail.Then we step back, and let you live in it."
-    }
-  ]
-
+      description:
+        "We walk you through every detail.Then we step back, and let you live in it.",
+    },
+  ];
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
   });
 
-  const x = useTransform(
-    scrollYProgress,
-    (value) => {
-      const snappedIndex = Math.round(value * (processes.length - 1));
-      return `-${snappedIndex * 100}vw`;
-    }
-  );
+  const x = useTransform(scrollYProgress, (value) => {
+    const snappedIndex = Math.round(value * (processes.length - 1));
+    return `-${snappedIndex * 100}vw`;
+  });
 
   return (
     <section

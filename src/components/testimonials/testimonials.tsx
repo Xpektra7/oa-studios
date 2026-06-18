@@ -35,7 +35,7 @@ export default function Testimonials() {
 
   return (
     <section className="relative w-screen bg-cream">
-      <div className="min-h-[60dvh] grid grid-cols-1 lg:grid-cols-[3fr_7fr] gap-12 lg:gap-16 items-center py-24 lg:py-32 px-8 lg:px-16">
+      <div className="container-oa min-h-[60dvh] grid grid-cols-1 lg:grid-cols-[3fr_7fr] gap-12 lg:gap-16 items-center py-24 lg:py-32">
         {/* Left: Attribution */}
         <div className="flex flex-col gap-4">
           <AnimatePresence mode="wait">

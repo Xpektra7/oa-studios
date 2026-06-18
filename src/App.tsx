@@ -1,8 +1,10 @@
 import About from "./components/about/about"
+import ContactFooter from "./components/contact-footer/contact-footer"
 import Hero from "./components/hero/hero"
 import Process from "./components/process/process"
 import Projects from "./components/projects/projects"
 import Services from "./components/services/services"
+import Journal from "./components/journal/journal"
 import Testimonials from "./components/testimonials/testimonials"
 import './index.css'
 
@@ -15,6 +17,8 @@ export default function App() {
       <Projects />
       <Process />
       <Testimonials />
+      <Journal />
+      <ContactFooter />
     </main>
   )
 }

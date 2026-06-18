@@ -21,7 +21,7 @@ export default function About() {
       className="relative min-h-dvh top-0 w-screen bg-cream p-16 px-8 md:px-16"
       style={{ rotate, scale }}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-1 gap-16 w-full">
+      <div className="container-oa grid grid-cols-1 lg:grid-cols-2 grid-rows-1 gap-16 w-full">
         <div className="space-y-8 col-span-1 text-sm">
           <h1 className="text-xl font-display font-bold text-bg tracking-widest">
             — WHO WE ARE
