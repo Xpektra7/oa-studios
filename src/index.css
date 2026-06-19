@@ -1,24 +1,28 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "Inter";
-    src: url("./assets/fonts/Inter-VariableFont_opsz,wght.ttf");
-}
-@font-face {
     font-family: "Cormorant Garamond";
-    src: url("./assets/fonts/CormorantGaramond-VariableFont_wght.ttf");
+    src: url("./assets/fonts/CormorantGaramond-VariableFont_wght.woff2");
+    font-weight: 100 900;
+    font-display: swap;
 }
 @font-face {
     font-family: "Montserrat";
-    src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+    src: url("./assets/fonts/Montserrat-VariableFont_wght.woff2");
+    font-weight: 100 900;
+    font-display: swap;
 }
 @font-face {
     font-family: "Cormorant Garamond Italic";
-    src: url("./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf");
+    src: url("./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2");
+    font-weight: 100 900;
+    font-display: swap;
 }
 @font-face {
     font-family: "Metal";
-    src: url("./assets/fonts/Metal-Regular.ttf");
+    src: url("./assets/fonts/Metal-Regular.woff2");
+    font-weight: 400;
+    font-display: swap;
 }
 
 @theme {

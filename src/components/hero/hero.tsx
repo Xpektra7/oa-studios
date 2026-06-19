@@ -9,10 +9,12 @@ import {
   type MotionStyle,
 } from "motion/react";
 
+const isDesktop = () => window.innerWidth >= 1024;
+
 export default function Hero() {
   const { scrollYProgress } = useScroll();
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -8]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const rotate = useTransform(scrollYProgress, [0, 1], isDesktop() ? [0, -8] : [0, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], isDesktop() ? [1, 0.8] : [1, 1]);
   return (
     <motion.section
       id="hero"

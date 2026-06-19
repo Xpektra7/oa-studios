@@ -3,6 +3,8 @@ import "./about.css";
 import { useScroll, useTransform, motion } from "motion/react";
 import StatCounter from "./stat-counter";
 
+const isDesktop = () => window.innerWidth >= 1024;
+
 export default function About() {
   const containerRef = useRef(null);
 
@@ -11,8 +13,8 @@ export default function About() {
     offset: ["start end", "end end"],
   });
 
-  const rotate = useTransform(scrollYProgress, [0, 1], [-8, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 1], isDesktop() ? [-8, 0] : [0, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], isDesktop() ? [0.8, 1] : [1, 1]);
 
   return (
     <motion.section

@@ -36,6 +36,8 @@ export default function Services() {
     },
   ];
 
+  const isDesktop = window.innerWidth >= 1024;
+
   function useMouse() {
     const mouse = {
       x: useMotionValue(0),
@@ -49,13 +51,10 @@ export default function Services() {
     };
 
     useEffect(() => {
-      document
-        .getElementById("services")
-        ?.addEventListener("mousemove", mousemove);
-      return () =>
-        document
-          .getElementById("services")
-          ?.removeEventListener("mousemove", mousemove);
+      if (!isDesktop) return;
+      const el = document.getElementById("services");
+      el?.addEventListener("mousemove", mousemove);
+      return () => el?.removeEventListener("mousemove", mousemove);
     }, []);
 
     return mouse;
@@ -71,6 +70,7 @@ export default function Services() {
     start * (1 - factor) + end * factor;
 
   useEffect(() => {
+    if (!isDesktop) return;
     let rafId: number;
     const updateSmooth = () => {
       const rawX = rawMouse.x.get();
